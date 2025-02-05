@@ -60,7 +60,8 @@ public class Book {
 		this.price = price;
 	}
 	
-	public String ToString()
+	@Override
+	public String toString()
 	{
 		return title +" by "+author+", ISBN: "+ISBN+", Price: $"+Double.toString(price);
 	}
