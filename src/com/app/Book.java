@@ -66,9 +66,17 @@ public class Book {
 		return title +" by "+author+", ISBN: "+ISBN+", Price: $"+Double.toString(price);
 	}
 	
-	public boolean equals(Book other)
+	@Override
+	public boolean equals(Object other)
 	{
-		if(other.ISBN == this.ISBN)
+		if(other == null || !(other instanceof Book))
+		{
+			return false;
+		}
+		
+		Book book = (Book) other;
+		
+		if(book.ISBN == this.ISBN)
 		{
 			return true;
 		}
