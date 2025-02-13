@@ -25,7 +25,7 @@ public class LibraryApp {
 		System.out.println("\nSearching for book with ISBN: " + searchISBN);
 		Book foundBook = library.searchByISBN(searchISBN);
 		if (foundBook != null) {
-			System.out.println("Book found: " + foundBook.getTitle() + " by " + foundBook.getAuthor() + " (ISBN: " + foundBook.getISBN() + ", $" + String.format("%.2f", foundBook.getPrice()) + ")");
+			System.out.println("Book found: " + foundBook.toString());
 		}
 		else {
 			System.out.println("Book not found with ISBN: " + searchISBN);
@@ -38,7 +38,7 @@ public class LibraryApp {
 		
 		// Remove book2
 		
-		System.out.println("\nRemoving book: " + book2.getTitle() + " by " + book2.getAuthor() + " (ISBN: " + book2.getISBN() + ", $" + String.format("%.2f", book2.getPrice()) + ")");
+		System.out.println("\nRemoving book: " + book2.toString());
 		library.removeBook(book2);
 		
 		// Display all books
@@ -47,9 +47,9 @@ public class LibraryApp {
 		
 		// Attempt to remove book2 again, but it's already been removed, so it prints couldn't remove book.
         if (library.removeBook(book2)) {
-    		System.out.println("\nRemoving book: " + book2.getTitle() + " by " + book2.getAuthor() + " (ISBN: " + book2.getISBN() + ", $" + String.format("%.2f", book2.getPrice()) + ")");
+    		System.out.println("\nRemoving book: " + book2.toString());
         } else {
-    		System.out.println("\nCannot remove book: " + book2.getTitle() + " by " + book2.getAuthor() + " (ISBN: " + book2.getISBN() + ", $" + String.format("%.2f", book2.getPrice()) + "), book does not exist.");
+    		System.out.println("\nCannot remove book: " + book2.toString());
         }
 	}
 
