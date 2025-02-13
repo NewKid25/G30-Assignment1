@@ -68,6 +68,22 @@ public class Library {
 		return null;
 	}
 
+	/**
+	 * This method will display the book information for each book in the library
+	 */
+	public void displayBooks() {
+		boolean hasBooks = false;
+		
+		for(int i = 0; i < books.length; i++) {
+			if(books[i] != null) {
+				System.out.println(books[1].toString());
+				hasBooks = true;
+			}
+		}
+		if(!hasBooks) {
+			System.out.println("There are no books in the library to display");
+		}
+
 	
 
 }
