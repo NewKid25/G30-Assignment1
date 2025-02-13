@@ -33,7 +33,7 @@ public class LibraryApp {
 		
 		// Display all books in the library
 		
-		System.out.println("\n All books in the library:");
+		System.out.println("\nAll books in the library:");
 		library.displayBooks();
 		
 		// Remove book2

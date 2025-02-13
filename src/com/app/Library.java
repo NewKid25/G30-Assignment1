@@ -39,15 +39,14 @@ public class Library {
 	 */
 	public boolean removeBook(Book book) {
 		for(int i = 0; i < books.length; i++) {
-			if(book != null && books[i].equals(book)) {
+			if(books[i] != null && books[i].equals(book)) {
 				books[i] = null;
 				count--;
-				System.out.println("The book, "+ book +", was succefully removed");
+				System.out.println("The book, "+ book +", was succesfully removed");
 				return true;
 			} 
 			
 		}
-		System.out.println("The book, "+ book +", could not be removed");
 		return false;
 	}
 
@@ -58,9 +57,9 @@ public class Library {
 	 * @return
 	 * returns the book with the matching ISBN if it matches, returns null if the ISBN does not match
 	 */
-	public Book seacrhByISBN(String ISBN) {
+	public Book searchByISBN(String ISBN) {
 		for(int i = 0; i < books.length; i++) {
-			if(books[i] != null && books[i].equals(ISBN)) {
+			if(books[i] != null && books[i].getISBN().equals(ISBN)) {
 				return books[i];
 			}
 		}
@@ -76,7 +75,7 @@ public class Library {
 		
 		for(int i = 0; i < books.length; i++) {
 			if(books[i] != null) {
-				System.out.println(books[1].toString());
+				System.out.println(books[i].toString());
 				hasBooks = true;
 			}
 		}
@@ -84,6 +83,6 @@ public class Library {
 			System.out.println("There are no books in the library to display");
 		}
 
-	
+	}
 
 }
